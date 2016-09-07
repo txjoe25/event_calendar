@@ -1,0 +1,19 @@
+<h1>Edit Your Profile</h1>
+<form action='/users/<%= @user.id %>' method='post'>
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<label class="w3-label">First Name:</label>
+	<input class="w3-input w3-animate-input" style="width:30%" type="text" name="first_name" value="<%= @user.first_name %>"><br>
+	<label class="w3-label">Last Name:</label>
+	<input class="w3-input w3-animate-input" style="width:30%" type="text" name="last_name" value="<%= @user.last_name %>"><br>
+	<label class="w3-label">Email:</label>
+	<input class="w3-input w3-animate-input" style="width:30%" type="email" name="email" value="<%= @user.email %>"><br>
+	<label class="w3-label">City:</label>
+	<input class="w3-input w3-animate-input" style="width:30%" type="text" name="city" value="<%= @user.city %>">
+	<select name="state" class="w3-select w3-text-green" style="width:30%">
+		<% us_states.each do |s| %>
+		<option <%= 'selected' if s == current_user.state %>><%= s %></option>
+		<% end %>
+	</select><br>
+	<input class="w3-input-btn" type="submit" value="Update Records">
+</form>
+</div>

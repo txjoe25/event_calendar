@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BeltReview</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+<body>
+<% if current_user %>
+<ul class="w3-navbar w3-dark-grey">
+	<li style="width:70%">Welcome, <%= current_user.first_name %></li>
+	<li style="width:10%"><a class="w3-padding" href="/users/<%= current_user.id %>">Edit Profile</a></li>
+	<li style="width:10%"><a class="w3-padding" href="/events">Events Dashboard</a></li>
+	<li style="width:10%"><a class="w3-padding" href="/sessions">Logout</a></li>
+</ul>
+<% end %>
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  city: MyString
+  state: MyString
+  date: 2016-08-16 17:17:56
+
+two:
+  user_id: 
+  city: MyString
+  state: MyString
+  date: 2016-08-16 17:17:56
