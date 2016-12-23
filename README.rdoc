@@ -1,4 +1,4 @@
-Features
+Repository Features
 
 ♦ Registration and login/logout with validation.
 
